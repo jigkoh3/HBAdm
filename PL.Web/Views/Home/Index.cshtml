@@ -1,0 +1,137 @@
+﻿<!DOCTYPE html>
+<html class=" CSSTableGenerator">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+    <title>HealthBook Admin</title>
+
+    <link href="~/app/css/style.css" rel="stylesheet">
+    <link href="~/app/css/style.css" rel="stylesheet" />
+    <script src="~/app/css/assets/js/jquery.js"></script>
+
+    <link rel="stylesheet" href="~/app/css/assets/css/bootstrap.css" />
+    <link rel="stylesheet" href="~/app/css/assets/css/font-awesome.css" />
+    <link href="~/app/css/assets/css/fullcalendar.css" rel="stylesheet" />
+    <link href="~/app/css/assets/css/fullcalendar.print.css" rel="stylesheet" />
+    <!-- page specific plugin styles -->
+    <link href="~/app/css/assets/css/datepicker.css" rel="stylesheet" />
+    <!-- text fonts -->
+    <link rel="stylesheet" href="~/app/css/assets/css/ace-fonts.css" />
+    <!-- ace styles -->
+    <link rel="stylesheet" href="~/app/css/assets/css/ace.css" class="ace-main-stylesheet" id="main-ace-style" />
+
+    <!--[if lte IE 9]>
+      <link rel="stylesheet" href="~/app/css/assets/css/ace-part2.css" class="ace-main-stylesheet" />
+    <![endif]-->
+    <!--[if lte IE 9]>
+      <link rel="stylesheet" href="~/app/css/assets/css/ace-ie.css" />
+    <![endif]-->
+    <!-- inline styles related to this page -->
+    <!-- ace settings handler -->
+    <script src="~/app/css/assets/js/ace-extra.js"></script>
+    <!-- HTML5shiv and Respond.js for IE8 to support HTML5 elements and media queries -->
+    <!--[if lte IE 8]>
+    <script src="~/app/css/assets/js/html5shiv.js"></script>
+    <script src="~/app/css/assets/js/respond.js"></script>
+    <![endif]-->
+
+    <script src="~/app/lib/angular.min.js"></script>
+    <script src="~/app/lib/angular-route.min.js"></script>
+    <script src="~/app/lib/angular-local-storage.min.js"></script>
+
+    <script src="~/app/lib/spin.min.js"></script>
+    <script src="~/app/lib/angular-spinner.min.js"></script>
+    <script src="~/app/lib/angular-loading-spinner.js"></script>
+
+    <script src="~/Scripts/jquery.signalR-2.0.1.js"></script>
+    <script src="~/app/lib/angular-signalr-hub.js"></script>
+
+
+    <script src="~/app/app.js"></script>
+    <script src="~/app/controllers/auth/associateController.js"></script>
+    <script src="~/app/controllers/auth/indexController.js"></script>
+    <script src="~/app/controllers/auth/loginController.js"></script>
+    <script src="~/app/controllers/auth/signupController.js"></script>
+    <script src="~/app/controllers/HomeController.js"></script>
+    <script src="~/app/controllers/LeftMenuController.js"></script>
+    <script src="~/app/controllers/SetMemberStatusController.js"></script>
+    <script src="~/app/controllers/DashboardController.js"></script>
+
+    <script src="~/app/services/auth/authInterceptorService.js"></script>
+    <script src="~/app/services/auth/authService.js"></script>
+    <script src="~/app/services/dataProviderService.js"></script>
+
+
+</head>
+<body ng-app="hbAdmApp" class="no-skin CSSTableGenerator">
+    <span us-spinner="{radius:30, width:8, length:16, top:'40%'}"></span>
+    <!--ng-view-->
+    <div ng-view="" style="height:100%;">
+
+
+    </div>
+    <!--//ng-view-->
+    <!--[if !IE]> -->
+    <script type="text/javascript">
+        window.jQuery || document.write("<script src='~/app/css/assets/js/jquery.js'>" + "<" + "/script>");
+    </script>
+    <!-- <![endif]-->
+    <!--[if IE]>
+    <script type="text/javascript">
+     window.jQuery || document.write("<script src='~/app/css/assets/js/jquery1x.js'>"+"<"+"/script>");
+    </script>
+    <![endif]-->
+    <script type="text/javascript">
+        if ('ontouchstart' in document.documentElement) document.write("<script src='~/app/css/assets/js/jquery.mobile.custom.js'>" + "<" + "/script>");
+    </script>
+    <script src="~/app/css/assets/js/bootstrap.js"></script>
+    <!-- page specific plugin scripts -->
+    <script src="~/app/css/assets/js/fuelux/fuelux.wizard.js"></script>
+    <script src="~/app/css/assets/js/bootbox.js"></script>
+    <script src="~/app/css/assets/js/jquery.nestable.js"></script>
+    <script src="~/app/css/assets/js/typeahead.jquery.js"></script>
+    <script src="~/app/css/assets/js/date-time/bootstrap-datepicker.js"></script>
+    <script src="~/app/css/assets/js/date-time/bootstrap-datepicker.en-GB.js"></script>
+
+    <!--[if lte IE 8]>
+      <script src="~/app/css/assets/js/excanvas.js"></script>
+    <![endif]-->
+    <script src="~/app/css/assets/js/jquery-ui.custom.js"></script>
+    <script src="~/app/css/assets/js/jquery.ui.touch-punch.js"></script>
+    <script src="~/app/css/assets/js/jquery.easypiechart.js"></script>
+    <script src="~/app/css/assets/js/jquery.sparkline.js"></script>
+    <script src="~/app/css/assets/js/flot/jquery.flot.js"></script>
+    <script src="~/app/css/assets/js/flot/jquery.flot.pie.js"></script>
+    <script src="~/app/css/assets/js/flot/jquery.flot.resize.js"></script>
+    <!-- ace scripts -->
+
+    <script src="~/app/css/assets/js/date-time/moment.js"></script>
+    <script src="~/app/css/assets/js/ace/elements.scroller.js"></script>
+    <script src="~/app/css/assets/js/ace/elements.colorpicker.js"></script>
+    <script src="~/app/css/assets/js/ace/elements.fileinput.js"></script>
+    <script src="~/app/css/assets/js/ace/elements.typeahead.js"></script>
+    <script src="~/app/css/assets/js/ace/elements.wysiwyg.js"></script>
+    <script src="~/app/css/assets/js/ace/elements.spinner.js"></script>
+    <script src="~/app/css/assets/js/ace/elements.treeview.js"></script>
+    <script src="~/app/css/assets/js/ace/elements.wizard.js"></script>
+    <script src="~/app/css/assets/js/ace/elements.aside.js"></script>
+    <script src="~/app/css/assets/js/ace/ace.js"></script>
+    <script src="~/app/css/assets/js/ace/ace.ajax-content.js"></script>
+    <script src="~/app/css/assets/js/ace/ace.touch-drag.js"></script>
+    <script src="~/app/css/assets/js/ace/ace.sidebar.js"></script>
+    <script src="~/app/css/assets/js/ace/ace.sidebar-scroll-1.js"></script>
+    <script src="~/app/css/assets/js/ace/ace.submenu-hover.js"></script>
+    <script src="~/app/css/assets/js/ace/ace.widget-box.js"></script>
+    <script src="~/app/css/assets/js/ace/ace.settings.js"></script>
+    <script src="~/app/css/assets/js/ace/ace.settings-rtl.js"></script>
+    <script src="~/app/css/assets/js/ace/ace.settings-skin.js"></script>
+    <script src="~/app/css/assets/js/ace/ace.widget-on-reload.js"></script>
+    <script src="~/app/css/assets/js/ace/ace.searchbox-autocomplete.js"></script>
+    <script src="~/app/css/assets/js/fullcalendar.js"></script>
+    <!-- the following scripts are used in demo only for onpage help and you don't need them -->
+    <!--<link rel="stylesheet" href="~/app/css/assets/css/ace.onpage-help.css" />
+    <script type="text/javascript"> ace.vars['base'] = '..'; </script>
+    <script src="~/app/css/assets/js/ace/elements.onpage-help.js"></script>
+    <script src="~/app/css/assets/js/ace/ace.onpage-help.js"></script>-->
+</body>
+</html>

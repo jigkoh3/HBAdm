@@ -1,0 +1,46 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>Invoice</title>
+    <link rel="stylesheet" href="app/css/assets/css/bootstrap.css" />
+    <link rel="stylesheet" href="app/css/assets/css/font-awesome.css" />
+
+    <script src="app/css/assets/js/jquery.js"></script>
+    <script src="app/js/angular/angular.min.js"></script>
+</head>
+<body ng-app="main">
+    <div ng-controller="InvoicePrintController">
+        <div ng-show="isLoading">
+            <i class="ace-icon fa fa-spinner fa-spin orange bigger-125"></i> <small>Loading...</small>
+        </div>
+            <iframe frameborder="0" class="preview-pane" type="application/pdf" width="100%" height="580" src=""></iframe>
+
+        </div>
+
+    <script>
+
+        var appPrint = angular.module('main', []);
+
+        appPrint.controller("InvoicePrintController", function ($scope, $filter, $http) {
+            $scope.newInvoice = JSON.parse(localStorage.getItem('invoiceItem'));
+            $scope.isLoading = true;
+            $http({
+                method: "GET",
+                url: "http://localhost:2899/api/Invoice/" + $scope.newInvoice.InvoiceHdr.InvoiceId,
+                timeout: 30000
+            }).success(function (resultData) {
+                $('.preview-pane').attr('src', "Invoice001.pdf");
+                $scope.isLoading = false;
+                console.log(resultData);
+            }).error(function (data, status) {
+                //console.log("ERROR");
+                //console.log(data, status);
+            });
+
+        });
+
+
+    </script>
+</body>
+</html>

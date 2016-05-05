@@ -1,0 +1,106 @@
+﻿
+<div class="main-content-inner">
+    <div class="page-content">
+        <!-- .page-header -->
+        <div class="page-header"> 
+            <h1>
+                <i class="ace-icon fa fa-users green"></i> Member List
+            </h1>
+        </div>
+        <!-- /.page-header -->
+        <div class="row">
+            <div class="col-xs-12">
+                <!-- PAGE CONTENT BEGINS -->
+                <div class="widget-box ui-sortable-handle transparent" style="opacity: 1; z-index: auto;">
+                    <div class="">
+                        <div data-ng-hide="responseMessage == ''"
+                             data-ng-class="(isActionSuccess) ? 'alert alert-success' : 'alert alert-danger'">
+                            {{responseMessage}}
+                        </div>
+                        <!--<h5 class="widget-title"><i class="ace-icon fa fa-users fa-2x blue"></i>Total </h5>-->
+                        <!--<div class="widget-toolbar">
+
+                        </div>-->
+                    </div>
+
+                    <div class="widget-body">
+                        <!-- ===================================== search ==================================== -->
+                        <div class="">
+                            <div class="input-group">
+                                <span class="input-group-addon">
+                                    <i class="ace-icon fa fa-search"></i>
+                                </span>
+                                <input type="text" ng-model="query" class="form-control search-query" placeholder="Search">
+                            </div>
+                        </div>
+
+                        <!-- #section:custom/scrollbar -->
+                        <div class="widget-main padding-4 scrollable ace-scroll" data-size="350" style="position: relative;">
+                            <div class="scroll-track scroll-active" style="display: block; height: 100%;">
+                                <div class="scroll-bar" style="height: 8px; top: 0px;"></div>
+                            </div>
+                            <div class="scroll-content" style="max-height: 100%;">
+                                <div class="content">
+                                    <div class="col-xs-12">
+                                        <!-- Member Card -->
+                                        <div class="widget-box ui-sortable-handle" ng-repeat="member in requestMember | filter:query | filter:approvedStatusFilter">
+                                            <div class="profile-activity clearfix">
+                                                <img class="pull-left" alt="{{member.firstName}} {{member.lastName}}" ng-src="data:image/JPEg;base64,{{member.photo}}">
+                                                <a class="user" href="#"> {{member.firstName}} {{member.lastName}} </a><span class="pull-right">ID Card No. : {{member.ipPassport}} Tel : {{member.tel}} Email : {{member.email}}</span>
+                                                <div data-ng-class="(member.registerStatus=='Approved') ? 'green' : 'red'">
+                                                    <span ng-show="member.registerStatus=='Approved'"><i class="ace-icon fa fa-check bigger-110"></i></span><span ng-show="member.registerStatus=='Rejected'"><i class="ace-icon fa fa-times bigger-110"></i></span> {{member.registerStatus}}
+                                                </div>
+                                                <div class="time">
+                                                    <i class="ace-icon fa fa-clock-o bigger-110"></i> Request Date : {{member.created}}
+                                                </div>
+                                                <div class="time">
+                                                    <i class="ace-icon fa fa-clock-o bigger-110"></i> Action Date : {{member.updated}}
+                                                </div>
+                                                <div class="inline">
+                                                    <button ng-click="delete(member)" class="btn btn-white btn-default btn-round btn-xs"><i class="ace-icon fa fa-undo blue"></i> Delete</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- /section:custom/scrollbar -->
+                    </div>
+                </div>
+
+                <!-- /.row -->
+                <!-- PAGE CONTENT ENDS -->
+            </div>
+            <!-- /.col -->
+        </div>
+        <!-- /.row -->
+    </div>
+    <!-- /.page-content -->
+</div>
+
+
+
+<!--<div id="modalHN" tabindex="-1" class="modal fade" data-backdrop="static" data-keyboard="false">
+    <div class="modal-dialog modal-sm">
+        <div class="modal-content">
+            <div class="modal-body">
+                <button type="button" id="modalHNClose" class="close" data-dismiss="modal">&times;</button>
+                <h6>กรอกหมายเลข HN</h6>
+                &nbsp;
+                <div class="table-responsive">
+                    <label>HN : </label>
+                    <input type="text" ng-model="hn" required />
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-white btn-default btn-round btn-xs" ng-click="approve(member)" data-dismiss="modal">
+                    <i class="ace-icon fa fa-user green"></i> Approve
+                </button>
+                <button class="btn btn-white btn-default btn-round btn-xs" data-dismiss="modal">
+                    <i class="ace-icon fa fa-undo orange"></i> Cancel
+                </button>
+            </div>
+        </div>
+    </div>
+</div>-->
